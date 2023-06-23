@@ -8,7 +8,8 @@
           borderless
           class="full-width"
           :model-value="search" >
-          <template #appened>
+
+          <template #append>
             <q-icon name="mdi-magnify"/>
           </template>
         </q-input>
@@ -31,6 +32,16 @@
         </q-item>
       </q-list>
     </q-card>
+    <div class="col-xs-3">
+      <q-toolbar class="bg-primary">
+        <q-btn
+          fab
+          style="margin-bottom: -42px"
+          class="q-ml-md"
+          color="secondary"
+          icon="mdi-plus"></q-btn>
+      </q-toolbar>
+    </div>
   </q-page>
 </template>
 
