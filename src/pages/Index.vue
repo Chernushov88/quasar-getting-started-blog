@@ -30,6 +30,22 @@
             icon="mdi-delete"/>
           </q-item-section>
         </q-item>
+        <q-item>
+          <q-item-section>
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam delectus deleniti dignissimos dolore
+              doloribus enim et ex magnam magni minus natus obcaecati, placeat porro praesentium quibusdam rem sunt
+              tempore veritatis.
+            </div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam delectus deleniti dignissimos dolore
+              doloribus enim et ex magnam magni minus natus obcaecati, placeat porro praesentium quibusdam rem sunt
+              tempore veritatis.
+            </div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam delectus deleniti dignissimos dolore
+              doloribus enim et ex magnam magni minus natus obcaecati, placeat porro praesentium quibusdam rem sunt
+              tempore veritatis.
+            </div>
+          </q-item-section>
+        </q-item>
       </q-list>
     </q-card>
     <div class="col-xs-3">
@@ -47,6 +63,8 @@
 
 <script>
 import { defineComponent } from 'vue'
+import { colors } from 'quasar'
+const { getPaletteColor } = colors
 
 export default defineComponent({
   name: 'PageIndex',
@@ -54,6 +72,13 @@ export default defineComponent({
     return {
       search: ''
     }
+  },
+  mounted () {
+    console.log(getPaletteColor('blue-9'))
   }
 })
 </script>
+
+<style lang="scss">
+
+</style>
