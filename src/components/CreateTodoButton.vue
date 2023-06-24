@@ -1,5 +1,5 @@
 <template>
-  <q-btn @click="handleButtonClicked" />
+  <q-btn @click="handleButtonClicked"/>
 </template>
 
 <script>
@@ -22,22 +22,16 @@ export default {
     }
 
     const createTodo = (todoTitle) => {
-      if (todoTitle.length > 3) {
-        addTodo({
-          id: Date.now(),
-          label: todoTitle,
-          completed: false
-        })
-      } else {
-        $q.notify({
-          message: 'Todo Created!',
-          icon: 'mdi-check',
-          color: 'warning'
-        })
-      }
+      addTodo({
+        id: Date.now(),
+        label: todoTitle,
+        completed: false
+      })
     }
 
-    return { handleButtonClicked }
+    return {
+      handleButtonClicked
+    }
   }
 }
 </script>
