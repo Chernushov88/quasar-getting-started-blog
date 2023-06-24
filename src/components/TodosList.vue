@@ -1,9 +1,17 @@
 <template>
-  <q-list>
-    <q-item
-    v-for="todo in toodos" :key="todo.id">
+  <div
+    v-if="loading"
+    class="text-center"
+  >
+    <q-spinner
+      size="md"
+      color="primary"
+    />
+  </div>
+  <q-list v-else v-bind="$attrs">
+    <q-item v-for="todo in todos" :key="todo.id">
       <q-item-section side>
-        <UpdateTodoCheckbox :model-value="todo.completed" />
+        <UpdateTodoCheckbox :model-value="todo.complete" />
       </q-item-section>
 
       <q-item-section>
@@ -25,7 +33,8 @@
 <script>
 import UpdateTodoCheckbox from 'components/UpdateTodoCheckbox.vue'
 import DeleteTodoButton from 'components/DeleteTodoButton.vue'
-import { todos } from 'src/stores/todoStore'
+import { todos, $get } from 'src/stores/todoStore'
+import { ref } from 'vue'
 
 export default {
   components: {
@@ -34,7 +43,13 @@ export default {
   },
 
   setup () {
-    return { todos }
+    const loading = ref(true)
+
+    $get()
+      .then(response => {
+        loading.value = false
+      })
+    return { loading, todos }
   }
 }
 </script>
