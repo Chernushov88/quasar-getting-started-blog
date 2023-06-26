@@ -1,20 +1,50 @@
 <template>
   <q-page>
+    <!-- Feature -->
     <div
+      v-if="false"
+      style="min-height: 95vh"
       class="flex flex-center"
     >
       <Feature
-        class="justify-center"
-        style="max-width: 900px;"/>
+        class="justify-center full-width"
+      />
+    </div>
+
+    <div
+      v-if="false"
+      style="min-height: 95vh"
+      class="flex flex-center bg-grey-2"
+    >
+      <Feature
+        class="justify-center full-width"
+      />
+    </div>
+
+    <div
+      v-if="false"
+      style="min-height: 95vh"
+      class="flex flex-center"
+    >
+      <Feature
+        class="justify-center full-width"
+      />
+    </div>
+
+    <!-- Call To Action -->
+    <div v-if="true">
+      <CallToAction />
     </div>
   </q-page>
 </template>
 
 <script>
 import Feature from 'components/Feature.vue'
-
+import CallToAction from 'components/CallToAction.vue'
 export default {
-  name: 'PageName',
-  components: { Feature }
+  components: {
+    Feature,
+    CallToAction
+  }
 }
 </script>
