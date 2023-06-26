@@ -16,7 +16,6 @@
       </q-toolbar>
       <TodosList bordered />
     </q-card>
-
     <div class="col-xs-3">
       <q-toolbar class="bg-primary">
         <CreateTodoButton
@@ -28,11 +27,6 @@
         />
       </q-toolbar>
     </div>
-    <div
-      v-touch-swipe.mouse="fire"
-      class="bg-green-4 relative-position"
-      style="width: 300px; height: 300px;"
-    />
   </q-page>
 </template>
 
