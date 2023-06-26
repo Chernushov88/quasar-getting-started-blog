@@ -39,6 +39,9 @@
     <div v-if="true">
       <Testimonials />
     </div>
+    <div v-if="true">
+      <PricingTables />
+    </div>
   </q-page>
 </template>
 
@@ -46,12 +49,14 @@
 import Feature from 'components/Feature.vue'
 import CallToAction from 'components/CallToAction.vue'
 import Testimonials from 'components/Testimonials.vue'
+import PricingTables from 'components/PricingTables.vue'
 
 export default {
   components: {
     Feature,
     CallToAction,
-    Testimonials
+    Testimonials,
+    PricingTables
   }
 }
 </script>
